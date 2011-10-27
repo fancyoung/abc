@@ -1,7 +1,7 @@
-$primary_color: #4b7399
+$primary_color: #EDEDED
 
 body
-  background-color: $primary_color
+  background: $primary_color url("bgd.jpg")
   font:
     family: Verdana, Helvetica, Arial
     size: 14px
@@ -15,14 +15,6 @@ a
   clear: both
   height: 0
   overflow: hidden
-
-#container
-  width: 75%
-  margin: 0 auto
-  background: white
-  padding: 20px 40px
-  border: solid 1px black
-  margin-top: 20px
 
 #flash_notice,
 #flash_error,
@@ -64,3 +56,61 @@ a
     margin: 8px 10px
   ul
     margin: 0
+
+#header
+  display: block
+  border-bottom-style: solid
+  border-bottom-width: 3px
+  border-bottom-color: #494573
+  overflow: hidden
+  display: inline-block
+  min-width: 960px
+  h1
+    margin: 20px 0 15px 25px
+    float: left
+  ul#account-nav, ul#section-nav
+    list-style-type: none
+    overflow: hidden
+    display: inline-block
+    float: right
+    margin-top: 30px
+    padding: 10px
+    display: block
+    li
+      float: left
+      margin-left: 10px
+      border-left-style: solid
+      border-left-width: 2px
+      border-left-color: gray
+      padding-left: 10px
+      font-size: 16px
+      &:first-child
+        border-left: none
+        padding-left: 0
+      a
+        color: gray
+        text-decoration: none
+        font-weight: normal
+        &:hover
+          color: black
+        &.active, &.active:hover
+          color: #bff740
+  ul#account-nav
+    background-color: lightgray
+    padding-left: 15px
+    padding-right: 15px
+    margin-right: 25px
+    margin-left: 10px
+    -moz-border-radius: 7px
+    -webkit-border-radius: 7px
+    li a
+      color: #45a4ff
+      &:hover
+        color: #74d0f4
+      &.active
+        color: #bff740
+        &:hover
+          color: #bff740
+#footer
+  border-top: 1px solid #D5D5D5
+  text-align: center
