@@ -1,0 +1,9 @@
+%h2 忘记密码了？
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f|
+  = devise_error_messages!
+  %div
+    = f.label :email
+    %br/
+    = f.email_field :email
+  %div= f.submit "给我发送邮件重设密码"
+= render :partial => "devise/shared/links"

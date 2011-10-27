@@ -1,0 +1,14 @@
+%h2 更换密码
+= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :put }) do |f|
+  = devise_error_messages!
+  = f.hidden_field :reset_password_token
+  %div
+    = f.label :password, "新密码"
+    %br/
+    = f.password_field :password
+  %div
+    = f.label :password_confirmation, "确认新密码"
+    %br/
+    = f.password_field :password_confirmation
+  %div= f.submit "保存"
+= render :partial => "devise/shared/links"

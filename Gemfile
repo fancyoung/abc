@@ -9,7 +9,6 @@ gem 'bson_ext'
 gem "compass", ">= 0.12.alpha.0"
 gem 'mongoid'
 gem 'haml'
-gem 'haml-rails'
 gem 'fancy-buttons'
 gem 'devise'
 
@@ -20,6 +19,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
   gem 'nifty-generators'
+  gem 'haml-rails'
 end
 
 gem 'jquery-rails'
