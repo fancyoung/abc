@@ -1,4 +1,5 @@
 $primary_color: #EDEDED
+$width: 950px
 
 body
   background: $primary_color url("bgd.jpg")
@@ -57,14 +58,13 @@ a
   ul
     margin: 0
 
+.container
+
 #header
   display: block
-  border-bottom-style: solid
-  border-bottom-width: 3px
-  border-bottom-color: #494573
   overflow: hidden
-  display: inline-block
-  min-width: 960px
+  width: $width
+  margin: 0 auto
   h1
     margin: 20px 0 15px 25px
     float: left
@@ -111,6 +111,17 @@ a
         color: #bff740
         &:hover
           color: #bff740
+#content-wrapper
+  min-width: $width
+  min-height: 500px
+  background-color: #F8F8F8
+  #content
+    width: 870px
+    margin: 0 auto
+    background: url(_bg-content.png) no-repeat 50% 0
+    padding: 16px 16px 40px
+    position: relative
+    top: -12px
 #footer
   border-top: 1px solid #D5D5D5
   text-align: center
