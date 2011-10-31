@@ -14,6 +14,8 @@ class PostsController < ApplicationController
   end
 
   def create
+    params[:post][:author] = current_user
+    params[:post][:updator] = current_user
     @post = Post.new(params[:post])
     if @post.save
       redirect_to @post, :notice => "Successfully created post."
@@ -27,6 +29,7 @@ class PostsController < ApplicationController
   end
 
   def update
+    params[:post][:updator] = current_user
     @post = Post.find(params[:id])
     if @post.update_attributes(params[:post])
       redirect_to @post, :notice  => "Successfully updated post."

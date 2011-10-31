@@ -1,0 +1,12 @@
+- title "Node"
+
+%p
+  %strong Name:
+  = @node.name
+
+%p
+  = link_to "Edit", edit_node_path(@node)
+  |
+  = link_to "Destroy", @node, :confirm => 'Are you sure?', :method => :delete
+  |
+  = link_to "View All", nodes_path
