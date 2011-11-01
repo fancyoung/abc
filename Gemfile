@@ -39,16 +39,17 @@ gem 'jquery-rails'
 group :test do
   # Pretty printed test output
   gem 'turn', :require => false
+  gem 'guard'
+  gem 'guard-rspec'
 end
 
 group :development do
+  gem 'spork'
+  gem 'guard-spork'
   gem 'rspec'
   gem 'rspec-rails'
-  gem 'guard'
   gem 'rb-inotify'
   gem 'libnotify'
-  # gem 'guard-test'
-  gem 'guard-rspec'
-  gem 'ruby-prof'
-  gem "mocha", :group => :test
+  # gem 'ruby-prof'
+  # gem "mocha", :group => :test
 end
