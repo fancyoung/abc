@@ -40,4 +40,15 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-gem "mocha", :group => :test
+
+group :development do
+  gem 'rspec'
+  gem 'rspec-rails'
+  gem 'guard'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  # gem 'guard-test'
+  gem 'guard-rspec'
+  gem 'ruby-prof'
+  gem "mocha", :group => :test
+end
