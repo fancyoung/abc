@@ -11,6 +11,7 @@ gem 'mongoid'
 gem 'haml'
 gem 'fancy-buttons'
 gem 'devise'
+gem 'i18n'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -36,20 +37,19 @@ gem 'jquery-rails'
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
-group :test do
+group :test, :development do
   # Pretty printed test output
   gem 'turn', :require => false
   gem 'guard'
   gem 'guard-rspec'
-end
 
-group :development do
   gem 'spork'
   gem 'guard-spork'
   gem 'rspec'
   gem 'rspec-rails'
   gem 'rb-inotify'
   gem 'libnotify'
+  gem 'factory_girl_rails'
   # gem 'ruby-prof'
   # gem "mocha", :group => :test
 end

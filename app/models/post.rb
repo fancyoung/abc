@@ -6,4 +6,7 @@ class Post
   field :content, :type => String
   referenced_in :author, class_name: 'User'
   referenced_in :updator, class_name: 'User'
+
+  validates_presence_of :title
+
 end
